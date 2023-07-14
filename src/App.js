@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <h1> Helo world </h1>
    <WeatherSearch />
+   <h2> open source code </h2>
     </div>
   );
 }
