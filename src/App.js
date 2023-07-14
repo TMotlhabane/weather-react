@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <h1> Helo world </h1>
    <WeatherSearch />
-   <h2> open source code </h2>
+  <a href="https://github.com/TMotlhabane/weather-react" target="_blank" rel="noopener noreferrer"> open source code </a>
     </div>
   );
 }
