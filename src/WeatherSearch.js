@@ -42,16 +42,28 @@ export default function WeatherSearch() {
           <input type="search" onChange={updateCity} />
           <input type="submit" value="Search" />
         </form>
-        <ul>
+        <div className="row">
+          <div className="col-6">
+<ul>
           <li>Temperature: {Math.round(weather.temperature)}°C</li>
           <li>Description: {weather.description}</li>
-          <li>Humidity: {weather.humidity}%</li>
-          <li>Wind: {weather.wind}km/h</li>
-          <li>
+         <li>
             <img src={weather.icon} alt={weather.description} />
           </li>
         </ul>
+          </div>
+          <div className="col-6">
+            <ul>
+  <li>Humidity: {weather.humidity}%</li>
+          <li>Wind: {weather.wind}km/h</li>
+          </ul>
+          </div>
+    
+      </div>
       </div>
     );
-  } else return <div>{form}</div>;
+  } else return <div>
+  {form}
+  </div>
+  ;
 }
