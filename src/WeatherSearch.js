@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 
 export default function WeatherSearch() {
@@ -13,7 +14,9 @@ export default function WeatherSearch() {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      description: response.data.weather[0].description
+      description: response.data.weather[0].description,
+      city: response.data.name,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -39,18 +42,31 @@ export default function WeatherSearch() {
     return (
       <div>
         <form onSubmit={handleSubmit}>
+          <div className= "row">
+            <div className= "col-6">
           <input type="search" onChange={updateCity} />
+          </div>
+         <div className= "col-3">
           <input type="submit" value="Search" />
+          </div>
+          </div>
         </form>
+        <h1>
+          {weather.city}
+          <ul>
+            <li> <FormattedDate date={weather.date} /> </li>
+            <li>
+              {weather.description}
+            </li>
+          </ul>
+        </h1>
         <div className="row">
           <div className="col-6">
-<ul>
-          <li>Temperature: {Math.round(weather.temperature)}°C</li>
-          <li>Description: {weather.description}</li>
-         <li>
-            <img src={weather.icon} alt={weather.description} />
-          </li>
-        </ul>
+   <img src={weather.icon} alt={weather.description} />
+         
+          <h2> {Math.round(weather.temperature)}°C</h2>
+
+         
           </div>
           <div className="col-6">
             <ul>
