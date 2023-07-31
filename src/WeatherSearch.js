@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import WeatherForecast from "./WeatherForecast";
 import WeatherIcon from "./WeatherIcon";
 import axios from "axios";
+import "./WeatherSearch.css";
 
 export default function WeatherSearch(props) {
   let [city, setCity] = useState(props.defaultCity);
