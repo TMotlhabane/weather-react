@@ -70,7 +70,7 @@ function handleSubmit(event){
         <div className="row">
           <div className="col-6">
    <div className="WeatherIcon">
-    <WeatherIcon code={props.data.icon} size={52} />
+    <WeatherIcon code={weather.icon} size={52} />
    </div>
          
           <span> <strong>{Math.round(weather.temperature)}</strong> </span> 
