@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherForecast from "./WeatherForecast";
 import WeatherIcon from "./WeatherIcon";
-import axios from "axios";
-import "./WeatherSearch.css";
+import axios from "axios"; 
+import "./App.css";
 
 export default function WeatherSearch(props) {
   let [city, setCity] = useState(props.defaultCity);
@@ -50,33 +50,27 @@ function handleSubmit(event){
     return (
       <div>
         <form onSubmit={handleSubmit}>
-          <div className= "row">
-            <div className= "col-6">
-          <input type="search" onChange={updateCity} />
-          </div>
-         <div className= "col-3">
-          <input type="submit" value="Search" />
-          </div>
-          </div>
+          <input className="searchButton" type="search" placeholder="Enter city here..." onChange={updateCity} />
+          <input className="searchButton" type="submit" value="Search" />
         </form>
         <h1>
           {weather.city}
+          </h1>
           <ul>
             <li> <FormattedDate date={weather.date} /> </li>
             <li>
               {weather.description}
             </li>
           </ul>
-        </h1>
         <div className="row">
           <div className="col-6">
-   <div className="WeatherIcon">
+   <span className="WeatherIcon">
     <WeatherIcon code={weather.icon} size={52} />
-   </div>
+   </span>
          
-          <span> <strong>{Math.round(weather.temperature)}</strong> </span> 
+     <span className="Temp"> <strong>{Math.round(weather.temperature)}</strong> </span> 
 
-<span>°C</span> 
+<span className="Celcius">°C</span> 
          
           </div>
           <div className="col-6">

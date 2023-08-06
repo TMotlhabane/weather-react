@@ -1,7 +1,82 @@
 .App {max-width: 600px;
-margin:30px auto;}
+margin:30px auto;
+ font-family: arial, sans-serif;
+   border: 1px solid #dadde1;
+   padding: 16px;
+   border-radius: 4px;
+   box-shadow: 10px 20px 3px rgba(0,0,0,0.1);
+background: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
+  }
 
 .App footer{
   font-size:11px;
   margin:10px 0;
 }
+
+.searchButton{
+  border-radius:10px;
+  margin:10px;
+  padding: 2px 5px;
+}
+
+ .forecast{
+  border-radius:12px;
+  padding:1rem;
+  margin:1rem auto;
+  background-color: rgba(225,225,225,0.2)
+ }
+
+ h1 {
+   font-size: 24px;
+   font-weight: 100;
+   margin: 20px 0 0 0;
+   line-height: 29px;
+ }
+
+  ul {
+   margin: 0;
+   padding: 0;
+ }
+
+  li {
+   font-size: 16px;
+   font-weight: 100;
+   line-height: 19px;
+   list-style-type: none;
+ }
+
+ .WeatherSearch .temperature {
+   font-weight: bold;
+   color: rgb(33, 33, 33);
+   font-size: 64px;
+   line-height: 64px;
+   margin-left: 5px;
+   font-weight: 400;
+   margin-left: 10px;
+ }
+
+  canvas {
+   margin: 10px auto;
+ }
+
+  .unit {
+   color: rgb(33, 33, 33);
+   font-size: 16px;
+   font-weight: 400;
+   position: relative;
+   line-height: 1;
+   top: -34px;
+ }
+
+ .tempMin {
+   opacity: 0.5;
+
+ }
+
+ .Temp{
+  font-size: 80px;
+ }
+
+ .Celcius{
+  font-size: 30px;
+ }
