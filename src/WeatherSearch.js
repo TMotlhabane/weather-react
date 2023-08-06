@@ -39,15 +39,10 @@ function handleSubmit(event){
     setCity(event.target.value);
   }
 
-  let form = (
-    <form onSubmit={handleSubmit}>
-      <input type="search" onChange={updateCity} />
-      <input type="submit" value="Search" />
-    </form>
-  );
+  ;
 
   if (loaded) {
-    return (
+    return ( 
       <div>
         <form onSubmit={handleSubmit}>
           <input className="searchButton" type="search" placeholder="Enter city here..." onChange={updateCity} />
@@ -68,7 +63,7 @@ function handleSubmit(event){
     <WeatherIcon code={weather.icon} size={52} />
    </span>
          
-     <span className="Temp"> <strong>{Math.round(weather.temperature)}</strong> </span> 
+     <span className="Temp"> <strong> { Math.round(weather.temperature) }</strong> </span> 
 
 <span className="Celcius">°C</span> 
          
@@ -84,9 +79,7 @@ function handleSubmit(event){
 <WeatherForecast coordinates={weather.coordinates} />
 
       </div>
-
-
-);
+    ) ;
   } else {search() ; return "loading..." }
   ;
-}
+  }
